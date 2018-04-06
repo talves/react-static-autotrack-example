@@ -37,5 +37,21 @@ export default {
         component: 'src/containers/404'
       }
     ];
+  },
+  Document: class CustomHtml extends Component {
+    render() {
+      const { Html, Head, Body, children } = this.props
+
+      return (
+        <Html>
+          <Head>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <script async src="https://www.google-analytics.com/analytics.js" />
+            <script async src="/assets/js/autotrack.custom.js" />
+          </Head>
+          <Body>{children}</Body>
+        </Html>
+      );
+    }
   }
 };
