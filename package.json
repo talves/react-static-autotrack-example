@@ -1,5 +1,5 @@
 {
-  "name": "react-static-example-basic",
+  "name": "react-static-autotrack-example",
   "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
@@ -7,6 +7,7 @@
     "start": "react-static start",
     "stage": "react-static build --staging",
     "build": "react-static build",
+    "build:autotrack": "autotrack -o public/assets/js/autotrack.custom.js -p outboundLinkTracker,urlChangeTracker",
     "serve": "serve dist -p 3000"
   },
   "dependencies": {
@@ -18,6 +19,7 @@
     "react-static": "^5.7.1"
   },
   "devDependencies": {
+    "autotrack": "^2.4.1",
     "eslint-config-react-tools": "1.x.x",
     "serve": "^6.1.0"
   }
